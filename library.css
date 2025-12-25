@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    padding: 30px;
+    background-color: rgb(16, 16, 18);
+}
+
+h1 {
+    color: #ddd;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container {
+    background-color: skyblue;
+    border: 1px solid grey;
+    padding:30px;
+}
+
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:15px;}
+
+img {
+    width:100px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-top:10px;
+}
+
+.new-book {
+    text-align: end;
+    margin-top: 20px;
+}
+
+li button {
+    background-color: skyblue;
+}
+
+.new-book > button {
+    background-color: rgb(42, 209, 181);
+    font-size: 1.3rem;
+    padding:4px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(28, 136, 118);
+}
+
+.book-container > div {
+    position: relative;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #444;
+    color: #ddd;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
