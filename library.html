@@ -8,10 +8,37 @@
     <title>Library</title>
 </head>
 <body>
+
+    
+    
     <h1>Library</h1>
 
 
     <div class="container">
+        <dialog>
+            <div class="modal">
+                <form method="modal">
+                    <label for="title">Title</label>
+                    <input id="title" type="text">
+                    <label for="author">Author</label>
+                    <input id="author" type="text">
+                    <label for="price">Price</label>
+                    <input id="price" type="number">
+                    <label for="genre">Genre</label>
+                    <select name="Genre" id="genre">
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Horror">Horror</option>
+                    </select>
+
+                    <button type="submit">Confirm</button>
+                    <button type="button" type="reset" id="cancel">Cancel</button>
+                </form>
+            </div>
+        </dialog>
+
+        
         <div class="book-container">
             <div>
                 <ul>
@@ -31,6 +58,8 @@
         <div class="new-book"><button>New Book</button></div>
     </div>
 
+
+    
     
 </body>
 </html>

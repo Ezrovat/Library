@@ -45,7 +45,9 @@ li {
 }
 
 li button {
-    background-color: skyblue;
+    background-color: rgb(97, 157, 180);
+    padding:3px;
+    
 }
 
 .new-book > button {
@@ -67,4 +69,16 @@ button:hover {
     color: #ddd;
     font-family: sans-serif;
     font-size: 1rem;
+}
+
+dialog[open] {
+    position:fixed;
+    margin:auto;
+}
+
+.modal {
+    border: 1px solid white;
+    width: 400px;
+    height: 500px;
+    background-color: white;
 }
