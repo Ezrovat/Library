@@ -73,8 +73,11 @@ submitButton.addEventListener("click", (e) => {
     const author = document.querySelector("#author").value;
     const price = document.querySelector("#price").value;
     const genre = document.querySelector("#genre").value;
-    const imgFile = document.querySelector("#imgFile").value;
+    const file = document.querySelector("#imgFile").files?.[0];
+    const imgFile = file ? URL.createObjectURL(file) : null;
     addBookToLibrary(title, author, price, genre, imgFile);
+    const library = document.querySelector(".book-container");
+    library.appendChild(buildBookHtml(books[books.length-1]));
     //displayBooks();
     console.table(books);
     dialog.close();
