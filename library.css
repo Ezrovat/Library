@@ -45,10 +45,17 @@ li {
     margin-top: 20px;
 }
 
-li button {
+.book-button button {
     background-color: rgb(97, 157, 180);
-    padding:3px;
-    
+    padding:5px;
+    color:white;
+}
+
+.book-button {
+    margin-top:20px;
+    display: flex;
+
+    gap:10px;
 }
 
 .new-book > button {
@@ -60,6 +67,15 @@ li button {
 button:hover {
     cursor: pointer;
     background-color: rgb(28, 136, 118);
+}
+
+.read-checkbox{
+    display: flex;
+    gap:10px;
+}
+
+input[id*='read']{
+    width: 18px;
 }
 
 .book-container > div {
@@ -95,7 +111,7 @@ form {
     text-align: center;
 }
 
-label {
+.modal label {
     display: block;
     margin-bottom: 5px;
 }
@@ -118,7 +134,7 @@ label {
     cursor:pointer;
 }
 
-.custom-file-upload{
+.custom-file-upload {
     border: 1px solid ;
     background-color: rgb(181, 124, 237);
     border-radius: 10px;
@@ -130,9 +146,7 @@ label {
     background-color: rgb(114, 0, 227);;
 }
 
-
-
-input {
+.modal input {
     width: 300px;
     border-radius: 5px;
     border-color: #ddd;
