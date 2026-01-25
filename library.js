@@ -1,4 +1,21 @@
 const books = [];
+class Book {
+    constructor(title, author, price, genre, imgFile, read) {
+        this.id = crypto.randomUUID();
+        this.imgFile = imgFile;
+        this.title = title ?? null;
+        this.author = author ?? null;
+        this.price = Number.isNaN(+price) ? null : Number(price).toFixed(2);
+        this.genre = genre ?? null;
+        this.read = read;
+    }
+
+    markRead() {
+        this.read = !this.read;
+        document.querySelector(`input[id=\'${this.id}_read\']`).checked = this.read;
+    }
+}
+
 addBookToLibrary(
     "Il Signore degli Anelli: La Compagnia dell'Anello",
     "Tolkien",
@@ -10,7 +27,7 @@ addBookToLibrary(
 
 displayBooks()
 
-function Book(title, author, price, genre, imgFile, read) {
+/*function Book(title, author, price, genre, imgFile, read) {
     this.id = crypto.randomUUID();
     this.imgFile = imgFile;
     this.title = title ?? null;
@@ -23,7 +40,9 @@ function Book(title, author, price, genre, imgFile, read) {
 Book.prototype.markRead = function() {
     this.read = !this.read;
     document.querySelector(`input[id=\'${this.id}_read\']`).checked = this.read;
-}
+}*/
+
+
 
 function addBookToLibrary(title, author, price, genre,imgFile, read) {
     books.push(new Book(title, author, price, genre, imgFile, read));
