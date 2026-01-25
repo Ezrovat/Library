@@ -95,6 +95,7 @@ function buildBookHtml(book) {
             const checkBoxInput = document.createElement("input");
             checkBoxInput.setAttribute("type", "checkbox");
             checkBoxInput.setAttribute("readOnly", "true");
+            checkBoxInput.setAttribute("onclick","return false;")
             checkBoxInput.setAttribute("id",`${book.id}_read`);
             const checkboxLabel = document.createElement("label");
             checkboxLabel.textContent = "Read";
